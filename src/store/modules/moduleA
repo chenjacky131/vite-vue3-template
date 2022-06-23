@@ -1,0 +1,6 @@
+const moduleA = {
+  state: () => {
+    sex: 'man'
+  }
+}
+export default moduleA;

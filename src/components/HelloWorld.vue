@@ -1,11 +1,16 @@
 <script setup>
-import { ref } from "vue";
-
+import {useStore} from 'vuex';
+const store = useStore();
+console.log(store.state.name) //  get state
+store.commit('SET_NAME', 'jack')  //  set state
+console.log(store.getters.hi) //  get getters
+store.dispatch('GET_NAME', {
+  name: 'jack2'
+})
 defineProps({
   msg: String,
 });
 
-const count = ref(0);
 </script>
 
 <template>

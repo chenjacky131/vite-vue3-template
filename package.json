@@ -3,13 +3,17 @@
   "version": "0.0.0",
   "license": "ISC",
   "scripts": {
-    "dev": "vite --host --port 8888",
+    "dev": "vite --host",
     "build": "vite build",
     "serve": "vite preview"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "qs": "^6.10.5",
     "sass": "^1.52.3",
-    "vue": "^3.2.16"
+    "vite-plugin-require-transform": "^1.0.3",
+    "vue": "^3.2.16",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
