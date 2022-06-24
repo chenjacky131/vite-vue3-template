@@ -46,6 +46,27 @@ const getData = () => { //  post请求格式的示例
 import.meta.env
 ```
 
+##### 状态的管理
+```
+import {useStore} from 'vuex';
+const store = useStore();
+console.log(store.state.name) //  get state
+store.commit('SET_NAME', 'jack')  //  set state
+console.log(store.getters.hi) //  get getters
+store.dispatch('GET_NAME', {  //  dispatch action
+  name: 'jack2'
+})
+console.log(store.state.a.sex)  //  get state of module a
+store.commit('SET_SEX', 'wowen')  //  set state of module a
+console.log(store.getters.hello) //  get getters of module a
+store.dispatch('GET_SEX', {  //  dispatch action
+  sex: 'unknown'
+})
+```
+##### 路由懒加载
+```
+参考vue router里面的路由懒加载vite章节
+```
 ## Recommended IDE Setup
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)

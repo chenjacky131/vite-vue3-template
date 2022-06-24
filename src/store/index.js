@@ -13,7 +13,7 @@ export default createStore({
     hi: state => `Hello ${state.name}`
   },
   modules: {
-    moduleA: moduleA
+    a: moduleA
   },
   actions: {
     async GET_NAME({commit}, payload) {
@@ -22,7 +22,6 @@ export default createStore({
           commit('SET_NAME', payload.name);
         }, 3000);
       });
-      console.log('完成');
     }
   }
 })
