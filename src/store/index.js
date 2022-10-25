@@ -1,5 +1,16 @@
 import { createStore } from "vuex";
-import moduleA from "./modules/moduleA";
+const lodeModules = () => { //  批量加载modules里面的模块
+  const files = import.meta.globEager('./modules/*.js')
+  /* */
+  const modules = {}
+  for(const key in files){
+    modules[key.replace(/(\.\/modules\/|\.js)/g,'')] = files[key].default;
+  }
+  Object.keys(modules).forEach(item => {
+    modules[item]['namespaced'] = true
+  });
+  return modules;
+}
 export default createStore({
   state: {
     name: 'tom'
@@ -12,9 +23,7 @@ export default createStore({
   getters: {
     hi: state => `Hello ${state.name}`
   },
-  modules: {
-    a: moduleA
-  },
+  modules: lodeModules(),
   actions: {
     async GET_NAME({commit}, payload) {
       await new Promise((resolve, reject) => {
