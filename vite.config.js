@@ -23,7 +23,12 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src')
+      '@': path.resolve(__dirname, 'src'),
+      '@c': path.resolve(__dirname, 'src/components'),
+      '@a': path.resolve(__dirname, 'src/assets'),
+      '@p': path.resolve(__dirname, 'src/pages'),
+      '@s': path.resolve(__dirname, 'src/store'),
+      '@u': path.resolve(__dirname, 'src/utils'),
     }
   },
   server: {

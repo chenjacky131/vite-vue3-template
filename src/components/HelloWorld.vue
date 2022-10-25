@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from 'vue';
 import { useStore } from 'vuex';
-import axios from '@/utils/axios.js';
+import axios from '@u/axios.js';
 const store =  useStore();
 onMounted(() => {
   axios.get('/test/getUserInfo').then(res => {

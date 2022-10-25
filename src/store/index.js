@@ -1,7 +1,6 @@
 import { createStore } from "vuex";
 const lodeModules = () => { //  批量加载modules里面的模块
-  const files = import.meta.globEager('./modules/*.js')
-  /* */
+  const files = import.meta.globEager('./modules/**/*.js')
   const modules = {}
   for(const key in files){
     modules[key.replace(/(\.\/modules\/|\.js)/g,'')] = files[key].default;
