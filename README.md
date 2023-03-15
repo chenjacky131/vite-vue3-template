@@ -67,6 +67,10 @@ store.dispatch('GET_SEX', {  //  dispatch action
 ```
 参考vue router里面的路由懒加载vite章节
 ```
+##### SVG图标使用
+```
+<svg-icon icon-class="close"></svg-icon>  //  icon-class填图标名
+```
 ## Recommended IDE Setup
 
 - [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
